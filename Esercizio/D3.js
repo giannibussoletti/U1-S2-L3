@@ -235,10 +235,7 @@ console.log(changedGender + " sono robot")
 
 for (i = 0; i < starWarsCharacters.length; i++) {
   let c = 0
-  if (
-    femaleCharacters[c] < femaleCharacters.length &&
-    femaleCharacters[c] !== starWarsCharacters[i].name
-  ) {
+  if (c < femaleCharacters.length && femaleCharacters[c] !== starWarsCharacters[i].name) {
     c++
   } else if (femaleCharacters[c] === starWarsCharacters[i].name) {
     delete starWarsCharacters[i].name
