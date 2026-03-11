@@ -228,17 +228,13 @@ console.log(changedGender + " sono robot")
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
-//SE  femalecharacters è diverso da starwarscharacter.name riproponi il loop e prova con il secondo nome
-
-for (let i = 0; i < starWarsCharacters.length; i++) {
-  for (let c = 0; c < femaleCharacters.length; c++) {
-    while (femaleCharacters[i] !== starWarsCharacters.name) {
-      console.log("ciao")
-    }
+for (let i = starWarsCharacters.length - 1; i >= 0; i--) {
+  if (starWarsCharacters[i].name.includes(femaleCharacters[i])) {
+    delete starWarsCharacters[i].name
   }
 }
 
-// console.log(starWarsCharacters)
+console.log(starWarsCharacters)
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento). */
