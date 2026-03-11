@@ -156,14 +156,21 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   switch (starWarsCharacters[i].eye_color) {
     case "blue":
       eyeColor.blue.push(starWarsCharacters[i].name)
+      break
     case "yellow":
       eyeColor.yellow.push(starWarsCharacters[i].name)
+      break
     case "brown":
       eyeColor.brown.push(starWarsCharacters[i].name)
+      break
     case "red":
       eyeColor.red.push(starWarsCharacters[i].name)
-    case "blueGray":
+      break
+    case "blue-gray":
       eyeColor.blueGray.push(starWarsCharacters[i].name)
+      break
+    default:
+      console.log("nessuno ha questo colore")
   }
 }
 
@@ -175,10 +182,9 @@ console.log(eyeColor)
 let crewMass = 0
 let i = 0
 while (i < starWarsCharacters.length) {
-  console.log("ok?")
   const partialMass = starWarsCharacters[i].mass
-  crewMass = crewMass + partialMass
-  i = i + 1
+  crewMass = crewMass + partialMass // crewMass += partialMass
+  i = i + 1 //i++
 }
 
 console.log(crewMass)
@@ -211,6 +217,17 @@ if (shipMass < 500) {
   console.log("DANGER! OVERLOAD ALERT: escape from ship now!")
 }
 
+// if (shipMass < 500) {
+// } else if (shipMass < 700) {
+//   console.log("Ship is half loaded")
+// } else if (shipMass < 900) {
+//   console.log("Warning: Load is over 700")
+// } else if (shipMass < 1000) {
+//   console.log("Critical Load: Over 900")
+// } else {
+//   console.log("DANGER! OVERLOAD ALERT: escape from ship now!")
+// }
+
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
@@ -234,7 +251,7 @@ console.log(changedGender + " sono robot")
 // vado avanti e controllo il prossimo oggetto nella index di swc
 
 //Prima versione
-for (i = 0; i < starWarsCharacters.length; i++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
   let c = 0
   if (c < femaleCharacters.length && femaleCharacters[c] !== starWarsCharacters[i].name) {
     c++
@@ -243,9 +260,11 @@ for (i = 0; i < starWarsCharacters.length; i++) {
   }
 }
 
+console.log(starWarsCharacters)
+
 //Versione Debrief
-for (i = 0; i < starWarsCharacters.length; i++) {
-  for (c = 0; c < femaleCharacters.length; c++) {
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  for (let c = 0; c < femaleCharacters.length; c++) {
     if (femaleCharacters[c] === starWarsCharacters[i].name) {
       delete starWarsCharacters[i].name
     }
@@ -253,6 +272,17 @@ for (i = 0; i < starWarsCharacters.length; i++) {
 }
 
 console.log(starWarsCharacters)
+
+//Versione per evitare che alcuni index vengano saltati partendo dalla fine dell'array
+for (let i = charactersNames.length - 1; i > 0; i--) {
+  for (let j = 0; j < femaleCharacters.length; j++) {
+    if (femaleCharacters[j] === charactersNames[i]) {
+      charactersNames.splice(i, 1)
+    }
+  }
+}
+
+console.log(charactersNames)
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento). */
