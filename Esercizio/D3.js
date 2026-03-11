@@ -242,6 +242,14 @@ for (i = 0; i < starWarsCharacters.length; i++) {
   }
 }
 
+for (i = 0; i < starWarsCharacters.length; i++) {
+  for (c = 0; c < femaleCharacters.length; c++) {
+    if (femaleCharacters[c] === starWarsCharacters[i].name) {
+      delete starWarsCharacters[i].name
+    }
+  }
+}
+
 console.log(starWarsCharacters)
 
 /* --EXTRA-- ESERCIZIO 10
