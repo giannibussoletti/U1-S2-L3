@@ -29,5 +29,7 @@ for (
 // 5) ...
 // 6) quando i era 4 e viene incrementata a 5, la condizione i < 5 tornerà FALSE -> il ciclo si ferma
 
-console.log("11" + 10) // 1110
-console.log("11" - 10) //
+// ... come mai il ciclo FOR è quello che utilizzeremo più spesso? perchè viene MOLTO COMODO
+// per l'esplorazione e 1a manipolazione degli ARRAYs
+
+const arrayDiNomi = ["Hina", "Daniele", "Cristina", "Antonii", "Franko", "Mohamed", "Michelangelo"]
