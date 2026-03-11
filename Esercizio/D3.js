@@ -1,103 +1,103 @@
 const starWarsCharacters = [
   {
-    name: 'Luke Skywalker',
+    name: "Luke Skywalker",
     height: 172,
     mass: 277,
-    hair_color: 'blond',
-    skin_color: 'fair',
-    eye_color: 'blue',
-    birth_year: '19BBY',
-    gender: 'male',
+    hair_color: "blond",
+    skin_color: "fair",
+    eye_color: "blue",
+    birth_year: "19BBY",
+    gender: "male",
   },
   {
-    name: 'C-3PO',
+    name: "C-3PO",
     height: 167,
     mass: 75,
-    hair_color: 'n/a',
-    skin_color: 'gold',
-    eye_color: 'yellow',
-    birth_year: '112BBY',
-    gender: 'n/a',
+    hair_color: "n/a",
+    skin_color: "gold",
+    eye_color: "yellow",
+    birth_year: "112BBY",
+    gender: "n/a",
   },
   {
-    name: 'R2-D2',
+    name: "R2-D2",
     height: 96,
     mass: 32,
-    hair_color: 'n/a',
-    skin_color: 'white, blue',
-    eye_color: 'red',
-    birth_year: '33BBY',
-    gender: 'n/a',
+    hair_color: "n/a",
+    skin_color: "white, blue",
+    eye_color: "red",
+    birth_year: "33BBY",
+    gender: "n/a",
   },
   {
-    name: 'Darth Vader',
+    name: "Darth Vader",
     height: 202,
     mass: 136,
-    hair_color: 'none',
-    skin_color: 'white',
-    eye_color: 'yellow',
-    birth_year: '41.9BBY',
-    gender: 'male',
+    hair_color: "none",
+    skin_color: "white",
+    eye_color: "yellow",
+    birth_year: "41.9BBY",
+    gender: "male",
   },
   {
-    name: 'Leia Organa',
+    name: "Leia Organa",
     height: 150,
     mass: 49,
-    hair_color: 'brown',
-    skin_color: 'light',
-    eye_color: 'brown',
-    birth_year: '19BBY',
-    gender: 'female',
+    hair_color: "brown",
+    skin_color: "light",
+    eye_color: "brown",
+    birth_year: "19BBY",
+    gender: "female",
   },
   {
-    name: 'Owen Lars',
+    name: "Owen Lars",
     height: 178,
     mass: 120,
-    hair_color: 'brown, grey',
-    skin_color: 'light',
-    eye_color: 'blue',
-    birth_year: '52BBY',
-    gender: 'male',
+    hair_color: "brown, grey",
+    skin_color: "light",
+    eye_color: "blue",
+    birth_year: "52BBY",
+    gender: "male",
   },
   {
-    name: 'Beru Whitesun lars',
+    name: "Beru Whitesun lars",
     height: 165,
     mass: 75,
-    hair_color: 'brown',
-    skin_color: 'light',
-    eye_color: 'blue',
-    birth_year: '47BBY',
-    gender: 'female',
+    hair_color: "brown",
+    skin_color: "light",
+    eye_color: "blue",
+    birth_year: "47BBY",
+    gender: "female",
   },
   {
-    name: 'R5-D4',
+    name: "R5-D4",
     height: 97,
     mass: 32,
-    hair_color: 'n/a',
-    skin_color: 'white, red',
-    eye_color: 'red',
-    birth_year: 'unknown',
-    gender: 'n/a',
+    hair_color: "n/a",
+    skin_color: "white, red",
+    eye_color: "red",
+    birth_year: "unknown",
+    gender: "n/a",
   },
   {
-    name: 'Biggs Darklighter',
+    name: "Biggs Darklighter",
     height: 183,
     mass: 84,
-    hair_color: 'black',
-    skin_color: 'light',
-    eye_color: 'brown',
-    birth_year: '24BBY',
-    gender: 'male',
+    hair_color: "black",
+    skin_color: "light",
+    eye_color: "brown",
+    birth_year: "24BBY",
+    gender: "male",
   },
   {
-    name: 'Obi-Wan Kenobi',
+    name: "Obi-Wan Kenobi",
     height: 182,
     mass: 77,
-    hair_color: 'auburn, white',
-    skin_color: 'fair',
-    eye_color: 'blue-gray',
-    birth_year: '57BBY',
-    gender: 'male',
+    hair_color: "auburn, white",
+    skin_color: "fair",
+    eye_color: "blue-gray",
+    birth_year: "57BBY",
+    gender: "male",
   },
 ]
 
@@ -105,26 +105,69 @@ const starWarsCharacters = [
   Crea una variabile chiamata "charactersNames" e assegnale un array vuoto
 */
 
+const charactersNames = []
+
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
   Dovrai accedere alla proprietà "name" di ogni oggetto in esso contenuto, e inserirla nell'array "charactersNames" creato precedentemente.
   Come risultato dovresti ottenere qualcosa di simile: ["Luke Skywalker", "C-3PO", "R2-D2", etc..]
 */
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const nomiPersonaggi = starWarsCharacters[i].name
+  charactersNames.push(nomiPersonaggi)
+}
+console.log(charactersNames)
+
 /* ESERCIZIO 3
   Seguendo i passaggi precedenti crea un nuovo array chiamato "femaleCharacters" e inserisci al suo interno tutti gli oggetti femminili.
 */
+
+const femaleCharacters = []
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const genderFem = starWarsCharacters[i].gender
+  let nomiPersonaggiFem = starWarsCharacters[i].name
+  if (genderFem === "female") {
+    femaleCharacters.push(nomiPersonaggiFem)
+  }
+}
+console.log(femaleCharacters)
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia le seguenti proprietà: blue, yellow, brown, red, blue-gray.
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
 
+eyeColor = {
+  blue: [],
+  yellow: [],
+  brown: [],
+  red: [],
+  blueGray: [],
+}
+
 /* ESERCIZIO 5
   Utilizza uno switch statement per inserire uno ad uno gli oggetti dei personaggi di "starWarsCharacters" negli array relativi al colore degli occhi precedentemente creati.
   Ogni personaggio dovrà finire nell'array corrispondente al suo colore degli occhi (al valore della sua proprietà "eye_color").
 */
 
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  switch (starWarsCharacters[i].eye_color) {
+    case "blue":
+      eyeColor.blue.push(starWarsCharacters[i].name)
+    case "yellow":
+      eyeColor.yellow.push(starWarsCharacters[i].name)
+    case "brown":
+      eyeColor.brown.push(starWarsCharacters[i].name)
+    case "red":
+      eyeColor.red.push(starWarsCharacters[i].name)
+    case "blueGray":
+      eyeColor.blueGray.push(starWarsCharacters[i].name)
+  }
+}
+
+console.log(eyeColor)
 /* ESERCIZIO 6
   Usa un while loop per calcolare la massa totale dell'equipaggio. Salvala in una variabile chiamata "crewMass".
 */
