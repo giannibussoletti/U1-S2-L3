@@ -33,3 +33,30 @@ for (
 // per l'esplorazione e 1a manipolazione degli ARRAYs
 
 const arrayDiNomi = ["Hina", "Daniele", "Cristina", "Antonii", "Franko", "Mohamed", "Michelangelo"]
+
+// invece di fare un console.log per ciascuno Posso usare un CICLO FOR!
+
+for (let i = 0; i < arrayDiNomi.length; i++) {
+  // all'inizio, 1a i vale 0, poi 1, 2, 3, 4, 5, 6
+  // 1a i diventerà sempre un INDICE VALIDO per esplorare l'array
+  console.log(arrayDiNomi[i])
+}
+
+const dogs = [
+  { name: "Fufi", age: 2 },
+  { name: "Pluto", age: 4 },
+  { name: "Gigione", age: 7 },
+]
+
+let totalAges = 0
+for (let i = 0; i < dogs.length; i++) {
+  //   console.log(i) // numero
+  //   console.log(dogs[i]) // oggetto
+  // qui dentro entrerò 3 volte
+  // 1a prima volta i vale
+  // 1a seconda volta i vale 1
+  // 1a terza volta i vale 2
+  totalAges = totalAges + dogs[i].age
+}
+
+console.log("L'età totale dei cani è: " + totalAges) // 13
