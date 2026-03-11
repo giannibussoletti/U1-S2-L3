@@ -92,7 +92,7 @@ const starWarsCharacters = [
   {
     name: "Obi-Wan Kenobi",
     height: 182,
-    mass: 77,
+    mass: 130,
     hair_color: "auburn, white",
     skin_color: "fair",
     eye_color: "blue-gray",
@@ -139,7 +139,7 @@ console.log(femaleCharacters)
   Ad ognuna di queste proprietà assegna come valore un array vuoto.
 */
 
-eyeColor = {
+const eyeColor = {
   blue: [],
   yellow: [],
   brown: [],
@@ -194,16 +194,51 @@ console.log(crewMass)
 
   Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se riesci ad ottenere un messaggio diverso.
 */
+let shipMass = 0
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  const partialMass2 = starWarsCharacters[i].mass
+  shipMass = shipMass + partialMass2
+}
+
+if (shipMass < 500) {
+} else if (shipMass > 500 && shipMass < 700) {
+  console.log("Ship is half loaded")
+} else if (shipMass > 700 && shipMass < 900) {
+  console.log("Warning: Load is over 700")
+} else if (shipMass > 900 && shipMass <= 1000) {
+  console.log("Critical Load: Over 900")
+} else {
+  console.log("DANGER! OVERLOAD ALERT: escape from ship now!")
+}
 
 /* ESERCIZIO 8
   Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
+const changedGender = []
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender === "n/a") {
+    starWarsCharacters[i].gender = "robot"
+    changedGender.push(starWarsCharacters[i].name)
+  }
+}
+console.log(changedGender + " sono robot")
 
 /* --EXTRA-- ESERCIZIO 9
   Utilizzando gli elementi presenti nell'array "femaleCharacters" rimuovi dall'array "charactersNames" le stringhe corrispondenti a personaggi con lo stesso nome.
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
+//SE  femalecharacters è diverso da starwarscharacter.name riproponi il loop e prova con il secondo nome
+
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  for (let c = 0; c < femaleCharacters.length; c++) {
+    while (femaleCharacters[i] !== starWarsCharacters.name) {
+      console.log("ciao")
+    }
+  }
+}
+
+// console.log(starWarsCharacters)
+
 /* --EXTRA-- ESERCIZIO 10
-  Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
-*/
+  Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento). */
