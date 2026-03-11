@@ -235,9 +235,17 @@ console.log(changedGender + " sono robot")
 
 for (i = 0; i < starWarsCharacters.length; i++) {
   let c = 0
-  if (femaleCharacters[c] === femaleCharacters.length) {
+  if (
+    femaleCharacters[c] < femaleCharacters.length &&
+    femaleCharacters[c] !== starWarsCharacters[i].name
+  ) {
+    c++
+  } else if (femaleCharacters[c] === starWarsCharacters[i].name) {
+    delete starWarsCharacters[i].name
   }
 }
+
+console.log(starWarsCharacters)
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento). */
