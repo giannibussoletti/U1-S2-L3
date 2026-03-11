@@ -28,3 +28,6 @@ for (
 // 4) viene riferificato se i è ancora più piccolo di 5, se torna TRUE si ri-esegue il for
 // 5) ...
 // 6) quando i era 4 e viene incrementata a 5, la condizione i < 5 tornerà FALSE -> il ciclo si ferma
+
+console.log("11" + 10) // 1110
+console.log("11" - 10) //
