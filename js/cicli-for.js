@@ -42,6 +42,8 @@ for (let i = 0; i < arrayDiNomi.length; i++) {
   console.log(arrayDiNomi[i])
 }
 
+//ARRA
+
 const dogs = [
   { name: "Fufi", age: 2 },
   { name: "Pluto", age: 4 },
