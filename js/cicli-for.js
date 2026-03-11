@@ -17,7 +17,7 @@
 for (
   let i = 0;
   i < 5;
-  i++ // i++ è una versione contratta di i = i + 1
+  i++ // i++ è una versione contratta di i = i + 1 il ++ può essere messo affianco a qualsiasi variabile numerica e ne aumenta il valore di 1
 ) {
   console.log("il codice è stato ripetuto: ", i + 1)
   // sezione per il codice da ripetere
