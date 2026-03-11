@@ -228,13 +228,16 @@ console.log(changedGender + " sono robot")
   Una volta fatto crea un console.log per controllare la proprietà length di "charactersNames" prima e dopo l'operazione.
 */
 
-for (let i = starWarsCharacters.length - 1; i >= 0; i--) {
-  if (starWarsCharacters[i].name.includes(femaleCharacters[i])) {
-    delete starWarsCharacters[i].name
+//per ogni iterazione di fm io devo controllare che all'interno dei vari oggetti di swc, name corrisponda almeno ad uno dei 3 nomi presenti nell'array fm
+
+// per ogni iterazione  di fc[i] io devo ricontrollare l'oggetto numero di volte i + 1 e se i di fc arriva ad essere < della lenght di fc
+// vado avanti e controllo il prossimo oggetto nella index di swc
+
+for (i = 0; i < starWarsCharacters.length; i++) {
+  let c = 0
+  if (femaleCharacters[c] === femaleCharacters.length) {
   }
 }
-
-console.log(starWarsCharacters)
 
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo (a tuo piacimento). */
