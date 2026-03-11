@@ -233,6 +233,7 @@ console.log(changedGender + " sono robot")
 // per ogni iterazione  di fc[i] io devo ricontrollare l'oggetto numero di volte i + 1 e se i di fc arriva ad essere < della lenght di fc
 // vado avanti e controllo il prossimo oggetto nella index di swc
 
+//Prima versione
 for (i = 0; i < starWarsCharacters.length; i++) {
   let c = 0
   if (c < femaleCharacters.length && femaleCharacters[c] !== starWarsCharacters[i].name) {
@@ -242,6 +243,7 @@ for (i = 0; i < starWarsCharacters.length; i++) {
   }
 }
 
+//Versione Debrief
 for (i = 0; i < starWarsCharacters.length; i++) {
   for (c = 0; c < femaleCharacters.length; c++) {
     if (femaleCharacters[c] === starWarsCharacters[i].name) {
